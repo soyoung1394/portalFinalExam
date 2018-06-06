@@ -1,0 +1,33 @@
+.contents{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 3rem;
+}
+
+table,tr, td{
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  width: 30rem;
+  height: 1rem;
+}
+
+input[type=text],[type=password]{
+height: 2rem;
+border: none;
+}
+
+th{
+  width: 20rem;
+}
+
+#joinBtn{
+margin: 1rem;
+background-color: #000;
+color: #fff;
+width: 30rem;
+padding: 0.5rem;
+height: 2.5rem;
+border: 1px solid;
+}

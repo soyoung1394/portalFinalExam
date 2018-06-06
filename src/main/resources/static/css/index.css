@@ -1,0 +1,33 @@
+body{
+    background-color: #000;
+    color: #fff;
+    margin: 2rem;
+}
+.contents{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#day{
+    margin-top: -6rem;
+}
+
+nav{
+    align-items: right;
+    align-content: right;
+    text-align: right;
+}
+
+nav ul{
+    color: #fff;
+    list-style: none;
+    align-items: center;
+}
+nav ul li{
+    display: inline;
+    margin: 0 1rem;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
