@@ -16,10 +16,10 @@ document.getElementById("day").innerHTML = today;
 
 $(document).ready(function () {
 
-$.get("question/search?day="+2018+"-"+mm+"-"+dd, function (question) {
+$.get("answer/search?day="+2018+"-"+mm+"-"+dd, function (answer) {
     console.log(question);
-    console.log(question.question);
-    var que=question.question;
+    console.log(answer.question);
+    var que=answer.question;
     console.log("que=",que);
         $('#question').text(que);
 });

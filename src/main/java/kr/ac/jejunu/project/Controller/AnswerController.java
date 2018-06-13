@@ -1,12 +1,13 @@
 package kr.ac.jejunu.project.Controller;
 
+import com.sun.tracing.dtrace.Attributes;
 import kr.ac.jejunu.project.Model.Answer;
 import kr.ac.jejunu.project.Repository.AnswerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Controller
 @RequestMapping("/answer")
@@ -18,11 +19,32 @@ public class AnswerController {
     public String answer(){
         return "/answer";
     }
-    @PostMapping("")
-    public String create(String day, String question, String answer){
-        Answer newAnswer=new Answer(day, question, answer);
-        answerRepository.save(newAnswer);
-        return "redirect:/";
+    @PostMapping
+    @ResponseBody
+    public Answer create(@RequestBody Answer answer){
+        return  answerRepository.save(answer);
     }
 
+    @PutMapping
+      public void update(@RequestBody Answer answer){
+        answerRepository.save(answer);
+    }
+    @GetMapping("/search")
+    @ResponseBody
+    public Answer get(@RequestParam(value = "day") String day){
+        return answerRepository.findByDay(day);
+    }
+
+    @GetMapping("/list")
+    @ResponseBody
+    public List<Answer> list(){
+        return answerRepository.findAll();
+    }
+
+    @GetMapping("/list/search")
+    @ResponseBody
+    public List<Answer> listByQuestion(@RequestParam String question){
+        return answerRepository.findAllByQuestion(question);
+
+    }
 }
