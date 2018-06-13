@@ -5,7 +5,10 @@ align-items: center;
 flex-direction: column;
 margin: 3rem;
 }
-
+#loginForm{
+  display: flex;
+  flex-direction: column;
+}
 #id, #password{
   margin: 0.5rem;
   width: 20rem;

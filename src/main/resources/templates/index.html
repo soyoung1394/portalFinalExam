@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr" xmlns:th="http://www.springframework.org/schema/data/jaxb">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" th:href="@{css/index.css}">
+
+</head>
+<body>
+<nav>
+    <ul>
+        <li ><a href="/users/loginForm">로그인</a></li>
+        <li ><a th:href="@{join.html}">회원가입</a></li>
+        <li ><a th:href="@{answer.html}">Answer</a></li>
+        <li ><a th:href="@{tour.html}">Tour</a></li>
+        <li ><a href="/users/logout">로그아웃</a></li>
+    </ul>
+</nav>
+
+<div class="contents">
+    <img class="mainImg" th:src="@{image/main.png}" alt="mainImg">
+    <!-- 날짜 -->
+
+    <p id="day"></div>
+
+
+<!-- 질문 -->
+
+</div>
+
+<script type="text/javascript" th:src="@{js/index.js}"></script>
+</body>
+</html>
