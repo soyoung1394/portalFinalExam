@@ -11,16 +11,17 @@ if(mm<10) {
     mm='0'+mm
 }
 
-// today = mm+'월'+dd+'일';
-// document.getElementById("day").innerHTML = today;
+today = yy+'년'+mm+'월'+dd+'일';
 
 $(document).ready(function () {
+    console.log(today);
+    $('#day').val(today);
 
-    $.get("question/search?day="+2018+"-"+mm+"-"+dd, function (question) {
+    $.get("../question/search?day="+2018+"-"+mm+"-"+dd, function (question) {
         console.log(question);
         console.log(question.question);
         var que=question.question;
         console.log("que=",que);
-        $('#question').text(que);
+        $('#question').val(que);
     });
 });

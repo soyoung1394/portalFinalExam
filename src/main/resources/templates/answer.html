@@ -20,15 +20,17 @@
 
 <div class="contents">
 
-<!-- 질문 -->
-    <p id="question"> </p>
- <!--답 -->
-   <!-- <input type="text" id="answer"/> -->
-    <textarea name="answer" id="answer"></textarea>
 
-    <button type="submit" id="save"> 저장하기</button>
+    <!--<p id="question"> </p>-->
+    <form name="answer" action="/answer" method="post">
+        <input type="text" id="day" name="day"/>
+        <input type="text" id="question" name="question"/>
+        <input type="textarea" name="answer" id="answer" ></inputtextarea>
+        <button type="submit" id="save"> 저장하기</button>
+    </form>
+
 </div>
-   <script type="text/javascript" src="../static/js/jquery-3.3.1.min.js" charset="utf-8"></script>
-   <script type="text/javascript" src="/js/answer.js"></script>
+   <script type="text/javascript" src="../js/jquery-3.3.1.min.js" charset="utf-8"></script>
+   <script type="text/javascript" src="../js/answer.js"></script>
 </body>
 </html>

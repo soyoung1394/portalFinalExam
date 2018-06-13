@@ -13,6 +13,7 @@ if(mm<10) {
 
 today = mm+'월'+dd+'일';
 document.getElementById("day").innerHTML = today;
+
 $(document).ready(function () {
 
 $.get("question/search?day="+2018+"-"+mm+"-"+dd, function (question) {
