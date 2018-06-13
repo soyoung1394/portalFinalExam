@@ -1,8 +1,11 @@
-package kr.ac.jejunu.project;
+package kr.ac.jejunu.project.Model;
+
+import lombok.Data;
 
 import javax.persistence.*;
 
 @Entity
+@Data
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,21 +24,6 @@ public class User {
     private String name;
     private String email;
 
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
     @Override
     public String toString() {

@@ -1,6 +1,6 @@
-package kr.ac.jejunu.project;
+package kr.ac.jejunu.project.Repository;
 
-import kr.ac.jejunu.project.User;
+import kr.ac.jejunu.project.Model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> {
