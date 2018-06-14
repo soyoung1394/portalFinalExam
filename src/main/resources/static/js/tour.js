@@ -14,7 +14,7 @@ var answer;
                 '<td>QUESTION</td>' +
                 '</tr>';
 
-            for (var i = 0; i < answer.length; i++) {
+            for (var i = 0; i <3; i++) {
                 list +=
                     '<tr>' +
                     '<td>' + answer[i].day + '</td>' +
