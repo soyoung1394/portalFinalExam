@@ -17,13 +17,15 @@ public class Answer {
     private String question;
     private String day;
     private String answer;
+    private Integer num;
 
     public Answer() {}
 
-    public Answer(String day, String question, String answer) {
+    public Answer(String day, String question, String answer, Integer num) {
         super();
         this.day = day;
         this.question = question;
         this.answer = answer;
+        this.num=num;
     }
 }

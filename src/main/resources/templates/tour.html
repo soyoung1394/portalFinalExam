@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="ko" dir="ltr">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="../static/css/answer.css?ver=1">
-    <link rel="stylesheet" href="../static/css/menu.css?ver=1">
+    <link rel="stylesheet" href="/css/answer.css">
+    <link rel="stylesheet" href="/css/menu.css">
 </head>
 <body>
 <a href="../"><image src="../image/main.png" alt="logo" class="logo"></image></a>
@@ -13,13 +12,16 @@
         <li ><a href="/users/loginForm">로그인</a></li>
         <li ><a href="../join.html">회원가입</a></li>
         <li ><a href="/answer/answerForm">Answer</a></li>
-      <li ><a href="../tour.html">Tour</a></li>
+      <li ><a href="/tour">Tour</a></li>
     </ul>
 </nav>
 
-<div class="contents">
 <!-- 게시판 -->
+<table>
+    <div class="questionList"></div>
+</table>
 
-</div>
+<script type="text/javascript" src="/js/jquery-3.3.1.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="/js/tour.js"></script>
 </body>
 </html>

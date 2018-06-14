@@ -3,7 +3,10 @@ package kr.ac.jejunu.project.Controller;
 import com.sun.tracing.dtrace.Attributes;
 import kr.ac.jejunu.project.Model.Answer;
 import kr.ac.jejunu.project.Repository.AnswerRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -41,10 +44,11 @@ public class AnswerController {
         return answerRepository.findAll();
     }
 
+
     @GetMapping("/list/search")
     @ResponseBody
-    public List<Answer> listByQuestion(@RequestParam String question){
-        return answerRepository.findAllByQuestion(question);
+    public List<Answer> listByQuestion(@RequestParam Integer num){
 
+        return answerRepository.findAllByNum(num);
     }
 }

@@ -1,4 +1,4 @@
-package kr.ac.jejunu.project;
+package kr.ac.jejunu.project.Controller;
 
 import kr.ac.jejunu.project.Model.User;
 import kr.ac.jejunu.project.Repository.UserRepository;
