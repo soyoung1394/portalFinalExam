@@ -44,7 +44,6 @@ public class AnswerController {
         return answerRepository.findAll();
     }
 
-
     @GetMapping("/list/search")
     @ResponseBody
     public List<Answer> listByQuestion(@RequestParam Integer num){

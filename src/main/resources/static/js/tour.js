@@ -9,7 +9,7 @@ var answer;
 
         var element = {};
         element.mapcard = function (answer) {
-            var list = '<tr>' +
+            var list = '<table>'+'<tr>' +
                 '<td>DAY</td>' +
                 '<td>QUESTION</td>' +
                 '</tr>';
@@ -17,13 +17,18 @@ var answer;
             for (var i = 0; i < answer.length; i++) {
                 list +=
                     '<tr>' +
-                    '<td>' + answer[i].day + '<td>' +
-                    '<td>' + answer[i].question + '<td>' +
-                    '<tr>'
+                    '<td>' + answer[i].day + '</td>' +
+                    '<td>' + '<span class="divList" data-href="/detail?num=' + answer[i].num + '">'
+                    + answer[i].question + '</span>'+'</td>' +
+                    '</tr>';
+
             }
             $('.questionList').html(list);
         }
         element.mapcard(answer);
+        $(".divList").click(function (e) {
+            window.location.href=$(this).attr("data-href");
+        })
     });
 
 });

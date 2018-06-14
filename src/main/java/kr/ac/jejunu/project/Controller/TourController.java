@@ -14,7 +14,11 @@ public class TourController {
     @GetMapping("tour")
     public String tour(Model model){
         model.addAttribute("answer",answerRepository.findAll());
-            return "tour";
+        return "tour";
     }
-
+    @GetMapping("detail")
+    public String detail(Model model){
+        model.addAttribute("answer",answerRepository.findAll());
+        return "detail";
+    }
 }

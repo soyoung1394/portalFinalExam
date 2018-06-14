@@ -1,0 +1,16 @@
+table{
+    border-collapse: collapse;
+    width: 80%;
+    height: 50%;
+    padding:10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table, th, td {
+    border: 1px solid #eee;
+    padding:1%;
+}
+table th{
+    background-color: #F7F9FF;
+}

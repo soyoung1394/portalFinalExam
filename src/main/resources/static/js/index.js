@@ -16,7 +16,8 @@ document.getElementById("day").innerHTML = today;
 
 $(document).ready(function () {
 
-$.get("answer/search?day="+2018+"-"+mm+"-"+dd, function (answer) {
+$.get("answer/search?day="+yy+"-"+mm+"-"+dd, function (answer) {
+
     console.log(question);
     console.log(answer.question);
     var que=answer.question;
