@@ -2,23 +2,47 @@ body{
   margin: 2rem;
 }
 
-.contents{
-  margin:2rem;
+#answerForm{
+  margin:3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#answer{
-  width: 80%;
-  height:10rem;
+.top{
+  display: flex;
+  flex-direction: row;
 }
 
+#question{
+font-size:1.5rem;
+  margin:1rem;
+}
+#day{
+  margin: 1.5rem;
+}
+#answer{
+  width:80%;
+  height:10rem;
+}
+.top{
+  display: flex;
+  flex-direction: row;
+}
 #save{
   margin: 0.5rem;
   width: 10rem;
   height: 3rem;
   background-color: #000;
+  color: #fff;
+  border:1px solid;
+}
+
+#cancle{
+  margin: 0.5rem;
+  width: 10rem;
+  height: 3rem;
+  background-color: #ddd;
   color: #fff;
   border:1px solid;
 }

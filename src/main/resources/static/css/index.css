@@ -12,7 +12,10 @@ body{
 #day{
     margin-top: -6rem;
 }
-
+#question{
+    border: dashed 2px #eee;
+    padding: 1rem 10rem;
+}
 nav{
     align-items: right;
     align-content: right;

@@ -29,7 +29,7 @@ function save() {
 function requestData(method, data) {
     $.ajax({
         url: host,
-            method: method,
+        method: method,
         contentType: "application/json;charset=UTF-8",
         data: JSON.stringify(data)
     }).done(function () {
@@ -39,7 +39,6 @@ function requestData(method, data) {
 }
 $(document).ready(function () {
 
-    console.log(today);
     document.getElementById("save").addEventListener("click", save);
     $('#day').val(today);
 
@@ -49,7 +48,7 @@ $(document).ready(function () {
         var que=question.question;
         $('#question').text(que);
         console.log("answer"+ question.answer);
-        if(question.answer!=""){
+        if(question.answer != ""){
             alert("이미 대답을 등록하셨습니다.");
             window.location.href = '/';
         }
