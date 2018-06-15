@@ -51,5 +51,9 @@ $(document).ready(function () {
         var que=answer.question;
         $('#question').text(que);
         console.log("answer"+ answer.answer);
+        if(answer.answer!=""){
+            alert("이미 대답을 등록하셨습니다.");
+            window.location.href = '/';
+        }
     });
 });

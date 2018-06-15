@@ -21,8 +21,8 @@ var answer;
                     '<td>' + '<span class="divList" data-href="/detail?num=' + answer[i].num + '">'
                     + answer[i].question + '</span>'+'</td>' +
                     '</tr>';
-
             }
+
             $('.questionList').html(list);
         }
         element.mapcard(answer);

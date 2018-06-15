@@ -7,27 +7,30 @@ function getUrlParams() {
     return params;
 }
 
-$(document).ready(function () {
-
     var params = getUrlParams();
     if (params.num) {
         $.get(host  + params.num, function (answer) {
-            console.log(answer);
             var element = {};
             element.mapcard = function (answer) {
+                $('#question').text(params.question);
                 var list = '';
-                $('.question').text(answer(params.num).question);
+                var p='';
+                for(var i=0; i<1; i++){
+                    p+='<p>'+answer[i].question+'</p>'
+                }
+
                 for (var i = 0; i < answer.length; i++) {
                     list +=
+                        '<table>'+
                         '<tr>' +
-                        // '<td>' + answer[i].day + '</td>' +
-                        '<td>' + answer[i].day + '</td>' +
-                        '<td>' + answer[i].answer + '</td>' +
+                        '<td class="day">' + answer[i].day + '</td>' +
+                        '<td class="answer">' + answer[i].answer + '</td>' +
                         '</tr>';
                 }
+                $('.question').html(p);
+
                 $('.contents').html(list);
             }
             element.mapcard(answer);
         });
     }
-});

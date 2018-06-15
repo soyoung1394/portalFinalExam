@@ -20,7 +20,7 @@ public class UserController {
     @PostMapping("/join")
     public String join(User user){
         userRepository.save(user);
-        return "index";
+        return "redirect:/";
     }
 
     @GetMapping("/loginForm")
